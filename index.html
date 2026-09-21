@@ -122,7 +122,7 @@
                     const b = document.createElement('button');
                     b.className = 'fb';
                     b.type = 'button';
-                    b.textContent = ind;
+                    b.textContent = isGoogleSheet(ind) ? 'Google Sheets' : ind;
                     b.onclick = (e) => filter(ind, e.target);
                     bar.appendChild(b);
                 }
