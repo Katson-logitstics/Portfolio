@@ -109,7 +109,7 @@
         }
 
         function isGoogleSheet(industry) {
-            return industry && industry.trim().toLowerCase() === 'Google Sheet';
+            return industry && industry.trim().toLowerCase() === 'google sheet';
         }
 
         function buildFilters() {
@@ -196,11 +196,11 @@
 
             let html = '';
 
-            // Render consolidated Google Sheets container card
+            // Render consolidated Google Sheets container card (without custom border)
             if (sheetItems.length > 0) {
                 const previewImg = sheetItems[0].imageUrl || 'https://via.placeholder.com/400x200?text=Google+Sheets';
                 html += `
-                    <div class="portfolio-card google-sheets-folder" onclick="openGoogleSheetsGroup()" style="cursor:pointer; position: relative;">
+                    <div class="portfolio-card google-sheets-folder" onclick="openGoogleSheetsGroup()" style="cursor:pointer;">
                         <div class="card-header">
                             <span class="industry-badge" style="background-color:${THEME1}; color:${THEME}; font-weight:700;">Google Sheets</span>
                             <div class="image-container">
